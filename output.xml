@@ -1,56 +1,179 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0.1 (Python 3.10.11 on win32)" generated="2024-07-05T01:59:23.806508" rpa="false" schemaversion="5">
-<suite id="s1" name="TC1" source="D:\IT Self Study\Robot Framework\Ecommerce Website\TC1.robot">
+<robot generator="Robot 7.0.1 (Python 3.10.11 on win32)" generated="2024-07-07T09:16:39.041085" rpa="false" schemaversion="5">
+<suite id="s1" name="TC1" source="D:\IT Self Study\Robot Framework\Ecommerce Website - Robot framework\TC1.robot">
 <test id="s1-t1" name="LoginTest" line="11">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-07-05T01:59:24.338945" level="INFO">Opening browser 'chrome' to base url 'https://demo.nopcommerce.com/'.</msg>
+<msg time="2024-07-07T09:16:39.253578" level="INFO">Opening browser 'chrome' to base url 'https://demo.nopcommerce.com/'.</msg>
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-07-05T01:59:24.338945" elapsed="3.468272"/>
+<status status="PASS" start="2024-07-07T09:16:39.253032" elapsed="2.497742"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-07-07T09:16:41.750774" elapsed="0.039028"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-07-05T01:59:28.823873" level="INFO">Slept 1 second.</msg>
+<msg time="2024-07-07T09:16:42.805414" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-07-05T01:59:27.807217" elapsed="1.016656"/>
+<status status="PASS" start="2024-07-07T09:16:41.790817" elapsed="1.014597"/>
 </kw>
 <kw name="loginToTheApplication">
 <kw name="Click Link" owner="SeleniumLibrary">
-<msg time="2024-07-05T01:59:28.823873" level="INFO">Clicking link 'xpath://a[contains(text(),'Log in')]'.</msg>
+<msg time="2024-07-07T09:16:42.807241" level="INFO">Clicking link 'xpath://a[contains(text(),'Log in')]'.</msg>
 <arg>xpath://a[contains(text(),'Log in')]</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<status status="PASS" start="2024-07-05T01:59:28.823873" elapsed="0.683062"/>
+<status status="PASS" start="2024-07-07T09:16:42.807241" elapsed="0.438614"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-07-05T01:59:29.506935" level="INFO">Typing text 'pavanoltraining@gmail.com' into text field 'id:Email'.</msg>
+<msg time="2024-07-07T09:16:43.245855" level="INFO">Typing text 'test@test.com' into text field 'id:Email'.</msg>
 <arg>id:Email</arg>
-<arg>pavanoltraining@gmail.com</arg>
+<arg>test@test.com</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-07-05T01:59:29.506935" elapsed="0.522291"/>
+<status status="PASS" start="2024-07-07T09:16:43.245855" elapsed="0.143519"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-07-05T01:59:30.029226" level="INFO">Typing text 'Test@123' into text field 'id:Password'.</msg>
+<msg time="2024-07-07T09:16:43.389926" level="INFO">Typing text 'Test@123' into text field 'id:Password'.</msg>
 <arg>id:Password</arg>
 <arg>Test@123</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-07-05T01:59:30.029226" elapsed="0.510658"/>
+<status status="PASS" start="2024-07-07T09:16:43.389374" elapsed="0.100347"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-07-05T01:59:30.539884" level="INFO">Clicking element 'xpath://button[contains(text(),'Log in')]'.</msg>
+<msg time="2024-07-07T09:16:43.490738" level="INFO">Clicking element 'xpath://button[contains(text(),'Log in')]'.</msg>
 <arg>xpath://button[contains(text(),'Log in')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-07-05T01:59:30.539884" elapsed="0.896797"/>
+<status status="PASS" start="2024-07-07T09:16:43.489721" elapsed="0.626876"/>
 </kw>
-<status status="PASS" start="2024-07-05T01:59:28.823873" elapsed="2.612808"/>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-07T09:16:45.122429" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-07T09:16:44.116597" elapsed="1.005832"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-07-07T09:16:45.123741" level="INFO">${"logout_button"} = xpath://a[contains(text(),'Log out')]</msg>
+<var>${"logout_button"}</var>
+<arg>xpath://a[contains(text(),'Log out')]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-07-07T09:16:45.123519" elapsed="0.000222"/>
+</kw>
+<kw name="Page Should Contain Link" owner="SeleniumLibrary">
+<msg time="2024-07-07T09:16:45.160194" level="INFO">Current page contains link 'xpath://a[contains(text(),'Log out')]'.</msg>
+<arg>${"logout_button"}</arg>
+<doc>Verifies link identified by ``locator`` is found from current page.</doc>
+<status status="PASS" start="2024-07-07T09:16:45.123741" elapsed="0.036453"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-07T09:16:46.173048" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-07T09:16:45.161295" elapsed="1.011753"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-07-07T09:16:46.173048" level="INFO">Clicking link 'xpath://a[contains(text(),'Log out')]'.</msg>
+<arg>${"logout_button"}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-07T09:16:46.173048" elapsed="0.637902"/>
+</kw>
+<kw name="Page Should Contain Link" owner="SeleniumLibrary">
+<msg time="2024-07-07T09:16:46.832221" level="INFO">Current page contains link 'xpath://a[contains(text(),'Log in')]'.</msg>
+<arg>xpath://a[contains(text(),'Log in')]</arg>
+<doc>Verifies link identified by ``locator`` is found from current page.</doc>
+<status status="PASS" start="2024-07-07T09:16:46.810950" elapsed="0.021271"/>
+</kw>
+<status status="PASS" start="2024-07-07T09:16:42.807241" elapsed="4.024980"/>
+</kw>
+<kw name="loginToTheApplicationWithIncorectEmail">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-07-07T09:16:46.833742" level="INFO">Clicking link 'xpath://a[contains(text(),'Log in')]'.</msg>
+<arg>xpath://a[contains(text(),'Log in')]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-07T09:16:46.833237" elapsed="0.332572"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-07T09:16:47.166983" level="INFO">Typing text 'tesst@test.com' into text field 'id:Email'.</msg>
+<arg>id:Email</arg>
+<arg>tesst@test.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-07T09:16:47.165809" elapsed="0.124163"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-07T09:16:47.290812" level="INFO">Typing text 'Test@123' into text field 'id:Password'.</msg>
+<arg>id:Password</arg>
+<arg>Test@123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-07T09:16:47.290206" elapsed="0.095521"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-07T09:16:47.386243" level="INFO">Clicking element 'xpath://button[contains(text(),'Log in')]'.</msg>
+<arg>xpath://button[contains(text(),'Log in')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-07T09:16:47.386157" elapsed="0.364027"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-07T09:16:48.759029" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-07T09:16:47.751405" elapsed="1.007624"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-07-07T09:16:48.797219" level="INFO">Current page contains element 'xpath://li[contains(text(),'No customer account found')]'.</msg>
+<arg>xpath://li[contains(text(),'No customer account found')]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-07-07T09:16:48.760185" elapsed="0.038921"/>
+</kw>
+<status status="PASS" start="2024-07-07T09:16:46.833237" elapsed="1.965869"/>
+</kw>
+<kw name="loginToTheApplicationWithIncorectPassword">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-07-07T09:16:48.799652" level="INFO">Clicking link 'xpath://a[contains(text(),'Log in')]'.</msg>
+<arg>xpath://a[contains(text(),'Log in')]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-07T09:16:48.799652" elapsed="0.345658"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-07T09:16:49.146520" level="INFO">Typing text 'test@test.com' into text field 'id:Email'.</msg>
+<arg>id:Email</arg>
+<arg>test@test.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-07T09:16:49.146409" elapsed="0.107854"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-07T09:16:49.255271" level="INFO">Typing text 'Testt@123' into text field 'id:Password'.</msg>
+<arg>id:Password</arg>
+<arg>Testt@123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-07T09:16:49.255271" elapsed="0.104667"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-07T09:16:49.360978" level="INFO">Clicking element 'xpath://button[contains(text(),'Log in')]'.</msg>
+<arg>xpath://button[contains(text(),'Log in')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-07T09:16:49.359938" elapsed="0.306753"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-07T09:16:50.673140" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-07T09:16:49.666691" elapsed="1.006449"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-07-07T09:16:50.679160" level="INFO">Current page contains element 'xpath://li[contains(text(),'The credentials provided are incorrect')]'.</msg>
+<arg>xpath://li[contains(text(),'The credentials provided are incorrect')]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-07-07T09:16:50.673140" elapsed="0.006020"/>
+</kw>
+<status status="PASS" start="2024-07-07T09:16:48.799652" elapsed="1.879508"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-07-05T01:59:31.440496" elapsed="2.305272"/>
+<status status="PASS" start="2024-07-07T09:16:50.679160" elapsed="2.172131"/>
 </kw>
-<status status="PASS" start="2024-07-05T01:59:24.338945" elapsed="9.406823"/>
+<status status="PASS" start="2024-07-07T09:16:39.244816" elapsed="13.606475"/>
 </test>
-<status status="PASS" start="2024-07-05T01:59:23.822088" elapsed="9.923680"/>
+<status status="PASS" start="2024-07-07T09:16:39.056111" elapsed="13.795180"/>
 </suite>
 <statistics>
 <total>
