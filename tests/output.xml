@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.10.11 on win32)" generated="2024-07-10T12:26:04.478017" rpa="false" schemaversion="5">
+<suite id="s1" name="MyaccountCustomerInfo" source="D:\IT Self Study\Robot Framework\Ecommerce Website - Robot framework\tests\MyaccountCustomerInfo.robot">
+<test id="s1-t1" name="Navigate to customer info" line="11">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-07-10T12:26:04.976401" level="FAIL">Variable '${url}' not found.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2024-07-10T12:26:04.976401" elapsed="0.001098">Variable '${url}' not found.</status>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2024-07-10T12:26:04.977499" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-07-10T12:26:04.978889" elapsed="0.000000"/>
+</kw>
+<kw name="Register" owner="keywords">
+<status status="NOT RUN" start="2024-07-10T12:26:04.978889" elapsed="0.000000"/>
+</kw>
+<kw name="loginToTheApplication" owner="keywords">
+<status status="NOT RUN" start="2024-07-10T12:26:04.980183" elapsed="0.000000"/>
+</kw>
+<kw name="Navigate to my account" owner="keywords">
+<status status="NOT RUN" start="2024-07-10T12:26:04.981016" elapsed="0.000000"/>
+</kw>
+<kw name="Verify the data in the my account" owner="keywords">
+<status status="NOT RUN" start="2024-07-10T12:26:04.981016" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2024-07-10T12:26:04.982831" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-07-10T12:26:04.964932" elapsed="0.017899">Variable '${url}' not found.</status>
+</test>
+<status status="FAIL" start="2024-07-10T12:26:04.493645" elapsed="0.492595"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="MyaccountCustomerInfo">MyaccountCustomerInfo</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-07-10T12:26:04.956911" level="ERROR">Error in file 'D:\IT Self Study\Robot Framework\Ecommerce Website - Robot framework\tests\MyaccountCustomerInfo.robot' on line 3: Processing variable file 'D:\IT Self Study\Robot Framework\Ecommerce Website - Robot framework\variables.py' failed: Importing variable file 'D:\IT Self Study\Robot Framework\Ecommerce Website - Robot framework\variables.py' failed: NameError: name 'Female' is not defined
+Traceback (most recent call last):
+  File "D:\IT Self Study\Robot Framework\Ecommerce Website - Robot framework\variables.py", line 3, in &lt;module&gt;
+    user_gender = Female
+PYTHONPATH:
+  D:\IT Self Study\Robot Framework\Ecommerce Website - Robot framework
+  C:\Users\Asus\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\Scripts\robot.exe
+  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\python310.zip
+  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\DLLs
+  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib
+  C:\Users\Asus\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0
+  C:\Users\Asus\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages
+  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0
+  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\site-packages</msg>
+</errors>
+</robot>
