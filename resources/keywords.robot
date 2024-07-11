@@ -49,8 +49,11 @@ Mandatory field validation
 # registration
 Register
     click link    xpath://a[contains(text(),'Register')]
-    ${gender-xpath}=    set variable If    '${user_gender} = "Female"'    id=gender-female    id:gender-male    
-    Click Element  ${gender-xpath}
+    Run Keyword if   "${user_gender}" == "Female"    
+    ...    Click Element    id:gender-female         
+...    ELSE    Click Element    id:gender-male 
+
+    # Click Element    ${gender-xpath}
     input text    id:FirstName    ${user_first_name}
     input text    id:LastName    ${user_last_name}
     select from list by label    DateOfBirthDay    ${user_date_of_birth_day}
@@ -69,7 +72,7 @@ Register
 
 Registration form field validation
     click link    xpath://a[contains(text(),'Register')]
-    ${gender-xpath}=    set variable If    '${user_gender} = "Female"'    id=gender-female    id:gender-male    
+    ${gender-xpath}=    set variable If    '${user_gender} = "Female"'    id:gender-female    id:gender-male    
     Click Element  ${gender-xpath}
     input text    id:FirstName    ${user_first_name}
     input text    id:LastName    ${user_last_name}
@@ -113,9 +116,9 @@ Verify the data in the my account
 
 Verify the gender
     ${gender_option_male}=    Get Element Attribute   id:gender-male     checked
-    ${gender_option_female}=    Get Element Attribute   id=gender-female     checked
-    Run Keyword If    "${user_gender}"==    "Male"    Should Be true    ${gender_option_male}    'Male is not selected'
-    Run Keyword If    "${user_gender}"==    "Female"    Should Be true    ${gender_option_female}    'Female is not selected'
+    ${gender_option_female}=     Execute Javascript      return document.getElementById("gender-female").checked
+    Run Keyword if   "${user_gender}" == "Male"   radio button should be set to    Gender  M
+...    ELSE   radio button should be set to    Gender   F
 
 
 
