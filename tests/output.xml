@@ -1,67 +1,382 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0.1 (Python 3.10.11 on win32)" generated="2024-07-10T12:26:04.478017" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0.1 (Python 3.10.11 on win32)" generated="2024-07-11T12:54:10.873100" rpa="false" schemaversion="5">
 <suite id="s1" name="MyaccountCustomerInfo" source="D:\IT Self Study\Robot Framework\Ecommerce Website - Robot framework\tests\MyaccountCustomerInfo.robot">
 <test id="s1-t1" name="Navigate to customer info" line="11">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-07-10T12:26:04.976401" level="FAIL">Variable '${url}' not found.</msg>
+<msg time="2024-07-11T12:54:11.191017" level="INFO">Opening browser 'chrome' to base url 'https://demo.nopcommerce.com/'.</msg>
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="FAIL" start="2024-07-10T12:26:04.976401" elapsed="0.001098">Variable '${url}' not found.</status>
+<status status="PASS" start="2024-07-11T12:54:11.191017" elapsed="2.800133"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="NOT RUN" start="2024-07-10T12:26:04.977499" elapsed="0.000000"/>
+<status status="PASS" start="2024-07-11T12:54:13.993569" elapsed="0.043269"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-11T12:54:15.043815" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2024-07-10T12:26:04.978889" elapsed="0.000000"/>
+<status status="PASS" start="2024-07-11T12:54:14.036838" elapsed="1.006977"/>
 </kw>
 <kw name="Register" owner="keywords">
-<status status="NOT RUN" start="2024-07-10T12:26:04.978889" elapsed="0.000000"/>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-07-11T12:54:15.050623" level="INFO">Clicking link 'xpath://a[contains(text(),'Register')]'.</msg>
+<arg>xpath://a[contains(text(),'Register')]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-11T12:54:15.047123" elapsed="0.873380"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-11T12:54:15.920503" level="INFO">Clicking element 'id:gender-male'.</msg>
+<arg>id:gender-male</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-11T12:54:15.920503" elapsed="0.221496"/>
+</kw>
+<arg>"${user_gender}" == "Female"</arg>
+<arg>Click Element</arg>
+<arg>id:gender-female</arg>
+<arg>ELSE</arg>
+<arg>Click Element</arg>
+<arg>id:gender-male</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-07-11T12:54:15.920503" elapsed="0.221496"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-11T12:54:16.141999" level="INFO">Typing text 'Shashini' into text field 'id:FirstName'.</msg>
+<arg>id:FirstName</arg>
+<arg>${user_first_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-11T12:54:16.141999" elapsed="0.480009"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-11T12:54:16.622008" level="INFO">Typing text 'Amasha' into text field 'id:LastName'.</msg>
+<arg>id:LastName</arg>
+<arg>${user_last_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-11T12:54:16.622008" elapsed="0.191384"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-07-11T12:54:16.813392" level="INFO">Selecting options from selection list 'DateOfBirthDay' by label 17.</msg>
+<arg>DateOfBirthDay</arg>
+<arg>${user_date_of_birth_day}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-07-11T12:54:16.813392" elapsed="0.140061"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2024-07-11T12:54:16.953453" level="INFO">Selecting options from selection list 'DateOfBirthMonth' by value 1.</msg>
+<arg>DateOfBirthMonth</arg>
+<arg>${user_date_of_birth_month}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2024-07-11T12:54:16.953453" elapsed="0.148867"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-07-11T12:54:17.102320" level="INFO">Selecting options from selection list 'DateOfBirthYear' by label 1997.</msg>
+<arg>DateOfBirthYear</arg>
+<arg>${user_date_of_birth_year}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-07-11T12:54:17.102320" elapsed="0.160954"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-11T12:54:17.263808" level="INFO">Typing text 'testerss@test.com' into text field 'id:Email'.</msg>
+<arg>id:Email</arg>
+<arg>${user_email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-11T12:54:17.263808" elapsed="0.386557"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-11T12:54:17.652302" level="INFO">Typing text 'Test' into text field 'id:Company'.</msg>
+<arg>id:Company</arg>
+<arg>${user_company}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-11T12:54:17.650365" elapsed="0.159473"/>
+</kw>
+<kw name="Select Checkbox" owner="SeleniumLibrary">
+<msg time="2024-07-11T12:54:17.811403" level="INFO">Selecting checkbox 'Newsletter'.</msg>
+<arg>Newsletter</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-11T12:54:17.809838" elapsed="0.039083"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-11T12:54:17.848921" level="INFO">Typing text 'Test@123' into text field 'id:Password'.</msg>
+<arg>id:Password</arg>
+<arg>${user_password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-11T12:54:17.848921" elapsed="0.420621"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-11T12:54:18.269542" level="INFO">Typing text 'Test@123' into text field 'id:ConfirmPassword'.</msg>
+<arg>id:ConfirmPassword</arg>
+<arg>${user_confirm_password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-11T12:54:18.269542" elapsed="0.225764"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-11T12:54:18.495306" level="INFO">Clicking element 'id:register-button'.</msg>
+<arg>id:register-button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-11T12:54:18.495306" elapsed="0.811433"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-07-11T12:54:19.400062" level="INFO">Current page contains element 'xpath://div[contains(text(),'Your registration completed')]'.</msg>
+<arg>xpath://div[contains(text(),'Your registration completed')]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-07-11T12:54:19.306739" elapsed="0.093323"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-11T12:54:20.409971" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-11T12:54:19.401020" elapsed="1.008951"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-07-11T12:54:20.409971" level="INFO">Clicking link 'xpath://a[contains(text(),'Log out')]'.</msg>
+<arg>xpath://a[contains(text(),'Log out')]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-11T12:54:20.409971" elapsed="1.004772"/>
+</kw>
+<kw name="Page Should Contain Link" owner="SeleniumLibrary">
+<msg time="2024-07-11T12:54:21.536187" level="INFO">Current page contains link 'xpath://a[contains(text(),'Log in')]'.</msg>
+<arg>xpath://a[contains(text(),'Log in')]</arg>
+<doc>Verifies link identified by ``locator`` is found from current page.</doc>
+<status status="PASS" start="2024-07-11T12:54:21.414743" elapsed="0.121444"/>
+</kw>
+<status status="PASS" start="2024-07-11T12:54:15.047123" elapsed="6.489900"/>
 </kw>
 <kw name="loginToTheApplication" owner="keywords">
-<status status="NOT RUN" start="2024-07-10T12:26:04.980183" elapsed="0.000000"/>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-07-11T12:54:21.540784" level="INFO">Clicking link 'xpath://a[contains(text(),'Log in')]'.</msg>
+<arg>xpath://a[contains(text(),'Log in')]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-11T12:54:21.539001" elapsed="0.731867"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-11T12:54:22.272295" level="INFO">Typing text 'testerss@test.com' into text field 'id:Email'.</msg>
+<arg>id:Email</arg>
+<arg>${user_email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-11T12:54:22.272295" elapsed="0.489886"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-11T12:54:22.762181" level="INFO">Typing text 'Test@123' into text field 'id:Password'.</msg>
+<arg>id:Password</arg>
+<arg>${user_password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-11T12:54:22.762181" elapsed="0.380476"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-11T12:54:23.143163" level="INFO">Clicking element 'xpath://button[contains(text(),'Log in')]'.</msg>
+<arg>xpath://button[contains(text(),'Log in')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-11T12:54:23.142657" elapsed="0.958048"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-11T12:54:26.111423" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-11T12:54:24.100705" elapsed="2.010718"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-07-11T12:54:26.111423" level="INFO">${"logout_button"} = xpath://a[contains(text(),'Log out')]</msg>
+<var>${"logout_button"}</var>
+<arg>xpath://a[contains(text(),'Log out')]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-07-11T12:54:26.111423" elapsed="0.000000"/>
+</kw>
+<kw name="Page Should Contain Link" owner="SeleniumLibrary">
+<msg time="2024-07-11T12:54:26.170003" level="INFO">Current page contains link 'xpath://a[contains(text(),'Log out')]'.</msg>
+<arg>${"logout_button"}</arg>
+<doc>Verifies link identified by ``locator`` is found from current page.</doc>
+<status status="PASS" start="2024-07-11T12:54:26.111423" elapsed="0.059116"/>
+</kw>
+<status status="PASS" start="2024-07-11T12:54:21.539001" elapsed="4.631538"/>
 </kw>
 <kw name="Navigate to my account" owner="keywords">
-<status status="NOT RUN" start="2024-07-10T12:26:04.981016" elapsed="0.000000"/>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-07-11T12:54:26.170539" level="INFO">Clicking link 'xpath://a[contains(text(),'My account')]'.</msg>
+<arg>xpath://a[contains(text(),'My account')]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-11T12:54:26.170539" elapsed="0.714196"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-11T12:54:27.899953" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-11T12:54:26.884735" elapsed="1.015962"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-07-11T12:54:27.947496" level="INFO">Current page contains element 'xpath://h1[contains(text(),'My account - Customer info')]'.</msg>
+<arg>xpath://h1[contains(text(),'My account - Customer info')]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-07-11T12:54:27.901793" elapsed="0.045703"/>
+</kw>
+<status status="PASS" start="2024-07-11T12:54:26.170539" elapsed="1.776957"/>
 </kw>
 <kw name="Verify the data in the my account" owner="keywords">
-<status status="NOT RUN" start="2024-07-10T12:26:04.981016" elapsed="0.000000"/>
+<kw name="Verify the gender" owner="keywords">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2024-07-11T12:54:28.022470" level="INFO">${gender_option_male} = true</msg>
+<var>${gender_option_male}</var>
+<arg>id:gender-male</arg>
+<arg>checked</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2024-07-11T12:54:27.953340" elapsed="0.069130"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-07-11T12:54:28.022470" level="INFO">Executing JavaScript:
+return document.getElementById("gender-female").checked
+Without any arguments.</msg>
+<msg time="2024-07-11T12:54:28.052348" level="INFO">${gender_option_female} = False</msg>
+<var>${gender_option_female}</var>
+<arg>return document.getElementById("gender-female").checked</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-07-11T12:54:28.022470" elapsed="0.029878"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Radio Button Should Be Set To" owner="SeleniumLibrary">
+<msg time="2024-07-11T12:54:28.056200" level="INFO">Verifying radio button 'Gender' has selection 'M'.</msg>
+<arg>Gender</arg>
+<arg>M</arg>
+<doc>Verifies radio button group ``group_name`` is set to ``value``.</doc>
+<status status="PASS" start="2024-07-11T12:54:28.053621" elapsed="0.102197"/>
+</kw>
+<arg>"${user_gender}" == "Male"</arg>
+<arg>radio button should be set to</arg>
+<arg>Gender</arg>
+<arg>M</arg>
+<arg>ELSE</arg>
+<arg>radio button should be set to</arg>
+<arg>Gender</arg>
+<arg>F</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-07-11T12:54:28.053621" elapsed="0.102197"/>
+</kw>
+<status status="PASS" start="2024-07-11T12:54:27.953340" elapsed="0.212077"/>
+</kw>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2024-07-11T12:54:28.225290" level="INFO">${first_name} = Shashini</msg>
+<var>${first_name}</var>
+<arg>id:FirstName</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-11T12:54:28.165417" elapsed="0.059873"/>
+</kw>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2024-07-11T12:54:28.288801" level="INFO">${last_name} = Amasha</msg>
+<var>${last_name}</var>
+<arg>id:LastName</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-11T12:54:28.225290" elapsed="0.063511"/>
+</kw>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2024-07-11T12:54:28.359690" level="INFO">${birth_day} = 17</msg>
+<var>${birth_day}</var>
+<arg>name:DateOfBirthDay</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-11T12:54:28.288801" elapsed="0.070889"/>
+</kw>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2024-07-11T12:54:28.429707" level="INFO">${birth_month} = 1</msg>
+<var>${birth_month}</var>
+<arg>name:DateOfBirthMonth</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-11T12:54:28.359690" elapsed="0.070017"/>
+</kw>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2024-07-11T12:54:28.503400" level="INFO">${birth_year} = 1997</msg>
+<var>${birth_year}</var>
+<arg>name:DateOfBirthYear</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-11T12:54:28.429707" elapsed="0.073693"/>
+</kw>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2024-07-11T12:54:28.560991" level="INFO">${email} = testerss@test.com</msg>
+<var>${email}</var>
+<arg>id:Email</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-11T12:54:28.503400" elapsed="0.057591"/>
+</kw>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2024-07-11T12:54:28.625321" level="INFO">${company_name} = Test</msg>
+<var>${company_name}</var>
+<arg>id:Company</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-11T12:54:28.564038" elapsed="0.061283"/>
+</kw>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2024-07-11T12:54:28.695866" level="INFO">${newsletter_checkbox} = true</msg>
+<var>${newsletter_checkbox}</var>
+<arg>name:Newsletter</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-11T12:54:28.625321" elapsed="0.070545"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${first_name}</arg>
+<arg>${user_first_name}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-07-11T12:54:28.696452" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${last_name}</arg>
+<arg>${user_last_name}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-07-11T12:54:28.696452" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${birth_day}</arg>
+<arg>${user_date_of_birth_day}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-07-11T12:54:28.700639" elapsed="0.001090"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${birth_month}</arg>
+<arg>${user_date_of_birth_month}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-07-11T12:54:28.701729" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${birth_year}</arg>
+<arg>${user_date_of_birth_year}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-07-11T12:54:28.701729" elapsed="0.003817"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${email}</arg>
+<arg>${user_email}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-07-11T12:54:28.705546" elapsed="0.001950"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${company_name}</arg>
+<arg>${user_company}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-07-11T12:54:28.707496" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${newsletter_checkbox}</arg>
+<arg>${user_newsletter}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-07-11T12:54:28.707496" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-07-11T12:54:27.950655" elapsed="0.756841"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="NOT RUN" start="2024-07-10T12:26:04.982831" elapsed="0.000000"/>
+<status status="PASS" start="2024-07-11T12:54:28.707496" elapsed="2.348167"/>
 </kw>
-<status status="FAIL" start="2024-07-10T12:26:04.964932" elapsed="0.017899">Variable '${url}' not found.</status>
+<status status="PASS" start="2024-07-11T12:54:11.189816" elapsed="19.865847"/>
 </test>
-<status status="FAIL" start="2024-07-10T12:26:04.493645" elapsed="0.492595"/>
+<status status="PASS" start="2024-07-11T12:54:10.873100" elapsed="20.182563"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="MyaccountCustomerInfo">MyaccountCustomerInfo</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="MyaccountCustomerInfo">MyaccountCustomerInfo</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2024-07-10T12:26:04.956911" level="ERROR">Error in file 'D:\IT Self Study\Robot Framework\Ecommerce Website - Robot framework\tests\MyaccountCustomerInfo.robot' on line 3: Processing variable file 'D:\IT Self Study\Robot Framework\Ecommerce Website - Robot framework\variables.py' failed: Importing variable file 'D:\IT Self Study\Robot Framework\Ecommerce Website - Robot framework\variables.py' failed: NameError: name 'Female' is not defined
-Traceback (most recent call last):
-  File "D:\IT Self Study\Robot Framework\Ecommerce Website - Robot framework\variables.py", line 3, in &lt;module&gt;
-    user_gender = Female
-PYTHONPATH:
-  D:\IT Self Study\Robot Framework\Ecommerce Website - Robot framework
-  C:\Users\Asus\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\Scripts\robot.exe
-  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\python310.zip
-  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\DLLs
-  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib
-  C:\Users\Asus\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0
-  C:\Users\Asus\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages
-  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0
-  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\site-packages</msg>
 </errors>
 </robot>
