@@ -1,7 +1,10 @@
 *** Settings ***
 Library    SeleniumLibrary
-Variables    ../variables.py
+Library    String
+Library    BuiltIn
+Resource    ../resources/variables.robot
 Resource  ../resources/keywords.robot
+Library    FakerLibrary
 
 
 *** Variables ***
@@ -13,9 +16,9 @@ Register A New Customer
     open browser    ${url}    ${browser}
     maximize browser window
     Sleep    1s
-    # Mandatory field validation
+    Mandatory field validation
     Register
-    # Registration form field validation
+    Registration form field validation
     close browser
 
 

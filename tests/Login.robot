@@ -1,6 +1,9 @@
 **** Settings ***
 Library    SeleniumLibrary
-Variables    ../variables.py
+Library    String
+Library    BuiltIn
+Library    FakerLibrary
+Resource    ../resources/variables.robot
 Resource  ../resources/keywords.robot
 
 *** Variables ***

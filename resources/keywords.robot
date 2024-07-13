@@ -1,9 +1,13 @@
 *** Settings ***
 Library    SeleniumLibrary
-Variables    ../variables.py
+Library    String
+Library    BuiltIn
+Resource  variables.robot
+Library    FakerLibrary
 
 
 *** Variables ***
+
 
 *** Keywords ***
 # login
@@ -13,12 +17,13 @@ loginToTheApplication
     input text    id:Password    ${user_password}
     click element    xpath://button[contains(text(),'Log in')]
     Sleep    2s
-    ${"logout_button"}    set variable    xpath://a[contains(text(),'Log out')]
-    Page Should Contain Link    ${"logout_button"}
+    ${logout_button}    set variable    xpath://a[contains(text(),'Log out')]
+    set global variable    ${logout_button} 
+    Page Should Contain Link    ${logout_button}
 
 
 logout
-    click link    ${"logout_button"}
+    click link    ${logout_button}
     Page Should Contain Link    xpath://a[contains(text(),'Log in')]
 
 
@@ -51,16 +56,22 @@ Register
     click link    xpath://a[contains(text(),'Register')]
     Run Keyword if   "${user_gender}" == "Female"    
     ...    Click Element    id:gender-female         
-...    ELSE    Click Element    id:gender-male 
-
-    # Click Element    ${gender-xpath}
-    input text    id:FirstName    ${user_first_name}
-    input text    id:LastName    ${user_last_name}
+...    ELSE    Click Element    id:gender-male    
+    ${registration_user_first_name} =  FakerLibrary.first_name
+    set Global Variable    ${registration_user_first_name}
+    ${registration_user_last_name} =  FakerLibrary.last_name
+    set Global Variable    ${registration_user_last_name}
+    ${registration_user_email} =  FakerLibrary.email
+    set Global Variable    ${registration_user_email}
+    ${registration_user_company} =  FakerLibrary.name
+    set Global Variable    ${registration_user_company}
+    input text    id:FirstName    ${registration_user_first_name}
+    input text    id:LastName    ${registration_user_last_name}
     select from list by label    DateOfBirthDay    ${user_date_of_birth_day}
     select from list by Value    DateOfBirthMonth    ${user_date_of_birth_month}
     select from list by label    DateOfBirthYear    ${user_date_of_birth_year}
-    input text    id:Email    ${user_email}
-    input text    id:Company    ${user_company}
+    input text    id:Email    ${registration_user_email}
+    input text    id:Company    ${registration_user_company}
     select checkbox    Newsletter
     input text    id:Password    ${user_password}
     input text    id:ConfirmPassword    ${user_confirm_password}
@@ -72,15 +83,16 @@ Register
 
 Registration form field validation
     click link    xpath://a[contains(text(),'Register')]
-    ${gender-xpath}=    set variable If    '${user_gender} = "Female"'    id:gender-female    id:gender-male    
-    Click Element  ${gender-xpath}
-    input text    id:FirstName    ${user_first_name}
-    input text    id:LastName    ${user_last_name}
+    Run Keyword if   "${user_gender}" == "Female"    
+    ...    Click Element    id:gender-female         
+...    ELSE    Click Element    id:gender-male 
+    input text    id:FirstName    ${registration_user_first_name}
+    input text    id:LastName    ${registration_user_last_name}
     select from list by label    DateOfBirthDay    ${user_date_of_birth_day}
-    select from list by label    DateOfBirthMonth    ${user_date_of_birth_month}
+    select from list by Value    DateOfBirthMonth    ${user_date_of_birth_month}
     select from list by label    DateOfBirthYear    ${user_date_of_birth_year}
     input text    id:Email    hbhkbkb
-    input text    id:Company    ${user_company}
+    input text    id:Company    ${registration_user_company}
     select checkbox    Newsletter
     input text    id:Password    ${user_password}
     input text    id:ConfirmPassword    Tester@123
@@ -120,6 +132,9 @@ Verify the gender
     Run Keyword if   "${user_gender}" == "Male"   radio button should be set to    Gender  M
 ...    ELSE   radio button should be set to    Gender   F
 
+Update the information
+    Clear Element Text    xpath://input[@id='FirstName']
+    
 
 
 
