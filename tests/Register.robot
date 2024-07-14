@@ -18,6 +18,7 @@ Register A New Customer
     Sleep    1s
     Mandatory field validation
     Register
+    logout
     Registration form field validation
     close browser
 

@@ -19,6 +19,7 @@ Navigate to customer info
     Navigate to my account
     Verify the data in the my account
     Update the information
+    Check updated data
     close browser
 
 *** Keywords ***

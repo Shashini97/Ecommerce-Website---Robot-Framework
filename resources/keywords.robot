@@ -77,9 +77,6 @@ Register
     input text    id:ConfirmPassword    ${user_confirm_password}
     click element    id:register-button
     Page Should Contain element    xpath://div[contains(text(),'Your registration completed')]
-    Sleep    1s
-    click link    xpath://a[contains(text(),'Log out')]
-    Page Should Contain Link    xpath://a[contains(text(),'Log in')]
 
 Registration form field validation
     click link    xpath://a[contains(text(),'Register')]
@@ -115,16 +112,15 @@ Verify the data in the my account
     ${birth_year}=    Get Value    name:DateOfBirthYear
     ${email}=    Get Value    id:Email
     ${company_name}=    Get Value    id:Company
-    ${newsletter_checkbox}=    Get Value    name:Newsletter
 
-    Should Be Equal    ${first_name}    ${user_first_name}
-    Should Be Equal    ${last_name}    ${user_last_name}
+    Should Be Equal    ${first_name}    ${registration_user_first_name}
+    Should Be Equal    ${last_name}    ${registration_user_last_name}
     Should Be Equal    ${birth_day}    ${user_date_of_birth_day}
     Should Be Equal    ${birth_month}    ${user_date_of_birth_month}
     Should Be Equal    ${birth_year}    ${user_date_of_birth_year}
-    Should Be Equal    ${email}    ${user_email}
-    Should Be Equal    ${company_name}    ${user_company}
-    Should Be Equal    ${newsletter_checkbox}    ${user_newsletter}
+    Should Be Equal    ${email}    ${registration_user_email}
+    Should Be Equal    ${company_name}    ${registration_user_company}
+    checkbox should be selected    name:Newsletter
 
 Verify the gender
     ${gender_option_male}=    Get Element Attribute   id:gender-male     checked
@@ -133,7 +129,41 @@ Verify the gender
 ...    ELSE   radio button should be set to    Gender   F
 
 Update the information
+    Click Element    id:gender-female 
     Clear Element Text    xpath://input[@id='FirstName']
+    input text    id:FirstName    Shashini
+    Clear Element Text    xpath://input[@id='LastName']
+    input text    id:LastName    Amasha
+    select from list by label    DateOfBirthDay    28
+    select from list by Value    DateOfBirthMonth    2
+    select from list by label    DateOfBirthYear    1995
+    Clear Element Text    xpath://input[@id='Email']
+    ${updated_user_email} =  FakerLibrary.email
+    set global variable    ${updated_user_email}
+    input text    id:Email    ${updated_user_email}
+    Clear Element Text    xpath://input[@id='Company']
+    input text    id:Company    HelloWorld
+    unselect checkbox    Newsletter
+    click element    id:save-info-button
+
+Check updated data
+    ${first_name}=    Get Value    id:FirstName
+    ${last_name}=    Get Value    id:LastName
+    ${birth_day}=    Get Value    name:DateOfBirthDay
+    ${birth_month}=    Get Value    name:DateOfBirthMonth
+    ${birth_year}=    Get Value    name:DateOfBirthYear
+    ${email}=    Get Value    id:Email
+    ${company_name}=    Get Value    id:Company
+
+    Should Be Equal    ${first_name}    Shashini
+    Should Be Equal    ${last_name}    Amasha
+    Should Be Equal    ${birth_day}    28
+    Should Be Equal    ${birth_month}    2
+    Should Be Equal    ${birth_year}    1995
+    Should Be Equal    ${email}    ${updated_user_email}
+    Should Be Equal    ${company_name}    HelloWorld
+    checkbox should not be selected    name:Newsletter
+
     
 
 
