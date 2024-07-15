@@ -169,6 +169,46 @@ Navigate to address section
     click link    xpath://a[contains(text(),'Addresses')]
     Sleep    1s
     page should contain element    xpath://h1[contains(text(),'My account - Addresses')]
+
+Add a new address
+    click element    xpath://button[contains(text(),'Add new')]
+    page should contain element    //h1[contains(text(),'My account - Add new address')]
+    ${address_first_name} =  FakerLibrary.first_name
+    set Global Variable    ${address_first_name}
+    ${address_last_name} =  FakerLibrary.last_name
+    set Global Variable    ${address_last_name}
+    ${address_email} =  FakerLibrary.email
+    set Global Variable    ${address_email}
+    ${address_company} =  FakerLibrary.name
+    set Global Variable    ${address_company}
+    ${address_city} =  FakerLibrary.city
+    set Global Variable    ${address_city}
+    ${address_address} =  FakerLibrary.address
+    set Global Variable    ${address_address}
+    ${address_zipcode} =  FakerLibrary.Port Number
+    set Global Variable    ${address_zipcode}
+    ${address_phonenumber} =  FakerLibrary.phonenumber
+    set Global Variable    ${address_phonenumber}
+    input text    id:Address_FirstName    ${address_first_name}
+    input text    id:Address_LastName    ${address_last_name}
+    input text    id:Address_Email    ${address_email}
+    input text    id:Address_Company    ${address_company}
+    select from list by label    Address.CountryId    United States
+    Sleep    1s
+    select from list by label    Address.StateProvinceId    Alaska
+    input text    id:Address_City    ${address_city}
+    input text    id:Address_Address1    ${address_address}
+    input text    id:Address_ZipPostalCode    ${address_zipcode}
+    input text    id:Address_PhoneNumber    ${address_phonenumber}
+    click element    xpath://button[contains(text(),'Save')]
+    page should contain element    //p[contains(text(),'The new address has been added successfully.')]
+
+
+
+
+
+
+
     
 
 
