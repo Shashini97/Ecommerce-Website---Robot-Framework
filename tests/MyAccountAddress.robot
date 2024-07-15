@@ -11,20 +11,17 @@ Resource  ../resources/keywords.robot
 
 
 *** Test Cases ***
-Navigate to customer info
+Navigate to address 
     open browser    ${url}    ${browser}
     maximize browser window
     Sleep    1s 
     Register
     Navigate to my account
-    Verify the data in the my account
+    Navigate to address section
 
-Update customer information
-    Update the information
-    Check updated data
-    close browser
+# Add an address
+#     Update the information
+#     Check updated data
+#     close browser
 
 *** Keywords ***
-
-
-

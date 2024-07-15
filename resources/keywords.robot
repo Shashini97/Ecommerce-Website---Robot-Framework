@@ -164,6 +164,11 @@ Check updated data
     Should Be Equal    ${company_name}    HelloWorld
     checkbox should not be selected    name:Newsletter
 
+#my account page - address section
+Navigate to address section
+    click link    xpath://a[contains(text(),'Addresses')]
+    Sleep    1s
+    page should contain element    xpath://h1[contains(text(),'My account - Addresses')]
     
 
 
