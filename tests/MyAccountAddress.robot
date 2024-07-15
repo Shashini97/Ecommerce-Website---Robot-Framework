@@ -19,9 +19,8 @@ Navigate to address
     Navigate to my account
     Navigate to address section
 
-# Add an address
-#     Update the information
-#     Check updated data
-#     close browser
+Add an address
+    Add a new address
+    close browser
 
 *** Keywords ***
