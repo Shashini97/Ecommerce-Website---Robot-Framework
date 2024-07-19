@@ -203,6 +203,27 @@ Add a new address
     click element    xpath://button[contains(text(),'Save')]
     page should contain element    //p[contains(text(),'The new address has been added successfully.')]
 
+Edit the address
+    click element    xpath://button[contains(text(),'Edit')]
+    page should contain element    //h1[contains(text(),'My account - Edit address')]
+    ${address_faxnumber} =  FakerLibrary.phonenumber
+    set Global Variable    ${address_faxnumber}
+    input text    id:Address_FaxNumber    ${address_faxnumber}
+    click element    //button[contains(text(),'Save')]
+
+Delete the address
+    click element    xpath://button[contains(text(),'Delete')]
+    Sleep    1s
+    handle alert    dismiss
+    click element    xpath://button[contains(text(),'Delete')]
+    Sleep    1s
+    handle alert    accept
+    Sleep    1s
+    page should contain element    //div[contains(text(),'No addresses')]
+
+
+
+
 
 
 

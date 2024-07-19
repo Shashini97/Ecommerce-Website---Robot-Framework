@@ -21,6 +21,11 @@ Navigate to address
 
 Add an address
     Add a new address
-    close browser
+
+Edit the added address
+    Edit the address
+
+Delete the added address
+    Delete the address
 
 *** Keywords ***
