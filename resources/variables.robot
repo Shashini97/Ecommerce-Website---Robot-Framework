@@ -18,6 +18,6 @@ ${user_email}    test@test.com
 # user_company = "Test"
 # ${user_newsletter}    true
 ${user_password}    Test@123
-${user_confirm_password}    Test@123
+${user_new_password}    Test@1234
 
 

@@ -74,7 +74,7 @@ Register
     input text    id:Company    ${registration_user_company}
     select checkbox    Newsletter
     input text    id:Password    ${user_password}
-    input text    id:ConfirmPassword    ${user_confirm_password}
+    input text    id:ConfirmPassword    ${user_password}
     click element    id:register-button
     Page Should Contain element    xpath://div[contains(text(),'Your registration completed')]
 
@@ -172,7 +172,7 @@ Navigate to address section
 
 Add a new address
     click element    xpath://button[contains(text(),'Add new')]
-    page should contain element    //h1[contains(text(),'My account - Add new address')]
+    page should contain element    xpath://h1[contains(text(),'My account - Add new address')]
     ${address_first_name} =  FakerLibrary.first_name
     set Global Variable    ${address_first_name}
     ${address_last_name} =  FakerLibrary.last_name
@@ -201,15 +201,15 @@ Add a new address
     input text    id:Address_ZipPostalCode    ${address_zipcode}
     input text    id:Address_PhoneNumber    ${address_phonenumber}
     click element    xpath://button[contains(text(),'Save')]
-    page should contain element    //p[contains(text(),'The new address has been added successfully.')]
+    page should contain element    xpath://p[contains(text(),'The new address has been added successfully.')]
 
 Edit the address
     click element    xpath://button[contains(text(),'Edit')]
-    page should contain element    //h1[contains(text(),'My account - Edit address')]
+    page should contain element    xpath://h1[contains(text(),'My account - Edit address')]
     ${address_faxnumber} =  FakerLibrary.phonenumber
     set Global Variable    ${address_faxnumber}
     input text    id:Address_FaxNumber    ${address_faxnumber}
-    click element    //button[contains(text(),'Save')]
+    click element    xpath://button[contains(text(),'Save')]
 
 Delete the address
     click element    xpath://button[contains(text(),'Delete')]
@@ -219,7 +219,19 @@ Delete the address
     Sleep    1s
     handle alert    accept
     Sleep    1s
-    page should contain element    //div[contains(text(),'No addresses')]
+    page should contain element    xpath://div[contains(text(),'No addresses')]
+
+#my account page - change password section
+Navigate to change password section
+    click link    xpath://a[contains(text(),'Change password')]
+    Sleep    1s
+    page should contain element    xpath://h1[contains(text(),'My account - Change password')]
+
+Change the password
+    input text    id:OldPassword    ${user_password}
+    input text    id:NewPassword    ${user_new_password}
+    input text    id:ConfirmNewPassword    ${user_new_password}
+
 
 
 

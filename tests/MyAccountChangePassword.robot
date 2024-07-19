@@ -11,22 +11,16 @@ Resource  ../resources/keywords.robot
 
 
 *** Test Cases ***
-Navigate to address 
+Navigate to change password 
     open browser    ${url}    ${browser}
     maximize browser window
     Sleep    1s 
     Register
     Navigate to my account
-    Navigate to address section
+    Navigate to change password section
 
-Add an address
-    Add a new address
+Change the user password
+    Change the password
 
-Edit the added address
-    Edit the address
-
-Delete the added address
-    Delete the address
-    close browser
 
 *** Keywords ***
