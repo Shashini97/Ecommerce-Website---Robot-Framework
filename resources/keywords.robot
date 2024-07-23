@@ -232,6 +232,20 @@ Change the password
     input text    id:NewPassword    ${user_new_password}
     input text    id:ConfirmNewPassword    ${user_new_password}
 
+#Desktop Section
+Navigate to computers section
+    click link    partial link:Compute
+    ${first_tab}    get text    link:Computers
+    page should contain element    xpath://h1[contains(text(),'Computers')]
+    ${first_tab_page}    get text    xpath://h1[contains(text(),'Computers')]
+    Should Be Equal    ${first_tab}    ${first_tab_page}
+
+
+Navigate to Desktop section
+    click on element    xpath://body/div[6]/div[3]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/h2[1]/a[1]
+    page should contain element    xpath://h1[contains(text(),'Desktops')]
+
+
 
 
 
