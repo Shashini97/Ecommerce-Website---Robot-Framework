@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0.1 (Python 3.10.11 on win32)" generated="2024-07-23T19:16:00.153206" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0.1 (Python 3.10.11 on win32)" generated="2024-07-24T08:29:41.292213" rpa="false" schemaversion="5">
 <suite id="s1" name="FirstTab" source="D:\IT Self Study\Robot Framework\Ecommerce Website - Robot framework\tests\FirstTab.robot">
 <test id="s1-t1" name="Navigate to first tab" line="14">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-07-23T19:16:01.092781" level="INFO">Opening browser 'chrome' to base url 'https://demo.nopcommerce.com/'.</msg>
+<msg time="2024-07-24T08:29:42.309785" level="INFO">Opening browser 'chrome' to base url 'https://demo.nopcommerce.com/'.</msg>
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-07-23T19:16:01.092781" elapsed="3.938657"/>
+<status status="PASS" start="2024-07-24T08:29:42.309785" elapsed="3.532068"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-07-23T19:16:05.031438" elapsed="0.046128"/>
+<status status="PASS" start="2024-07-24T08:29:45.846369" elapsed="0.036903"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-07-23T19:16:06.078275" level="INFO">Slept 1 second.</msg>
+<msg time="2024-07-24T08:29:46.896397" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-07-23T19:16:05.077566" elapsed="1.000709"/>
+<status status="PASS" start="2024-07-24T08:29:45.883272" elapsed="1.013125"/>
 </kw>
 <kw name="Register" owner="keywords">
 <kw name="Click Link" owner="SeleniumLibrary">
-<msg time="2024-07-23T19:16:06.078275" level="INFO">Clicking link 'xpath://a[contains(text(),'Register')]'.</msg>
+<msg time="2024-07-24T08:29:46.900459" level="INFO">Clicking link 'xpath://a[contains(text(),'Register')]'.</msg>
 <arg>xpath://a[contains(text(),'Register')]</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<status status="PASS" start="2024-07-23T19:16:06.078275" elapsed="0.890358"/>
+<status status="PASS" start="2024-07-24T08:29:46.900459" elapsed="0.853051"/>
 </kw>
 <kw name="Run Keyword If" owner="BuiltIn">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-07-23T19:16:06.970809" level="INFO">Clicking element 'id:gender-male'.</msg>
+<msg time="2024-07-24T08:29:47.758534" level="INFO">Clicking element 'id:gender-male'.</msg>
 <arg>id:gender-male</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-07-23T19:16:06.970809" elapsed="0.271695"/>
+<status status="PASS" start="2024-07-24T08:29:47.758534" elapsed="0.273055"/>
 </kw>
 <arg>"${user_gender}" == "Female"</arg>
 <arg>Click Element</arg>
@@ -40,174 +40,244 @@
 <arg>Click Element</arg>
 <arg>id:gender-male</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2024-07-23T19:16:06.969708" elapsed="0.272796"/>
+<status status="PASS" start="2024-07-24T08:29:47.753510" elapsed="0.278079"/>
 </kw>
 <kw name="First Name" owner="FakerLibrary">
-<msg time="2024-07-23T19:16:07.242504" level="INFO">${registration_user_first_name} = Alexander</msg>
+<msg time="2024-07-24T08:29:48.036112" level="INFO">${registration_user_first_name} = Sheri</msg>
 <var>${registration_user_first_name}</var>
-<status status="PASS" start="2024-07-23T19:16:07.242504" elapsed="0.000000"/>
+<status status="PASS" start="2024-07-24T08:29:48.031589" elapsed="0.004523"/>
 </kw>
 <kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-07-23T19:16:07.242504" level="INFO">${registration_user_first_name} = Alexander</msg>
+<msg time="2024-07-24T08:29:48.036112" level="INFO">${registration_user_first_name} = Sheri</msg>
 <arg>${registration_user_first_name}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-07-23T19:16:07.242504" elapsed="0.008083"/>
+<status status="PASS" start="2024-07-24T08:29:48.036112" elapsed="0.000000"/>
 </kw>
 <kw name="Last Name" owner="FakerLibrary">
-<msg time="2024-07-23T19:16:07.252090" level="INFO">${registration_user_last_name} = Savage</msg>
+<msg time="2024-07-24T08:29:48.036112" level="INFO">${registration_user_last_name} = Mendoza</msg>
 <var>${registration_user_last_name}</var>
-<status status="PASS" start="2024-07-23T19:16:07.250587" elapsed="0.001503"/>
+<status status="PASS" start="2024-07-24T08:29:48.036112" elapsed="0.000000"/>
 </kw>
 <kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-07-23T19:16:07.253153" level="INFO">${registration_user_last_name} = Savage</msg>
+<msg time="2024-07-24T08:29:48.036112" level="INFO">${registration_user_last_name} = Mendoza</msg>
 <arg>${registration_user_last_name}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-07-23T19:16:07.253153" elapsed="0.000000"/>
+<status status="PASS" start="2024-07-24T08:29:48.036112" elapsed="0.000000"/>
 </kw>
 <kw name="Email" owner="FakerLibrary">
-<msg time="2024-07-23T19:16:07.253153" level="INFO">${registration_user_email} = anna62@example.net</msg>
+<msg time="2024-07-24T08:29:48.044138" level="INFO">${registration_user_email} = berrymegan@example.org</msg>
 <var>${registration_user_email}</var>
-<status status="PASS" start="2024-07-23T19:16:07.253153" elapsed="0.000000"/>
+<status status="PASS" start="2024-07-24T08:29:48.036112" elapsed="0.008026"/>
 </kw>
 <kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-07-23T19:16:07.253153" level="INFO">${registration_user_email} = anna62@example.net</msg>
+<msg time="2024-07-24T08:29:48.044138" level="INFO">${registration_user_email} = berrymegan@example.org</msg>
 <arg>${registration_user_email}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-07-23T19:16:07.253153" elapsed="0.005583"/>
+<status status="PASS" start="2024-07-24T08:29:48.044138" elapsed="0.000000"/>
 </kw>
 <kw name="Name" owner="FakerLibrary">
-<msg time="2024-07-23T19:16:07.258736" level="INFO">${registration_user_company} = Jennifer Anderson</msg>
+<msg time="2024-07-24T08:29:48.044138" level="INFO">${registration_user_company} = Ronald Rivera</msg>
 <var>${registration_user_company}</var>
 <doc>:example: 'John Doe'</doc>
-<status status="PASS" start="2024-07-23T19:16:07.258736" elapsed="0.000000"/>
+<status status="PASS" start="2024-07-24T08:29:48.044138" elapsed="0.000000"/>
 </kw>
 <kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-07-23T19:16:07.262036" level="INFO">${registration_user_company} = Jennifer Anderson</msg>
+<msg time="2024-07-24T08:29:48.044138" level="INFO">${registration_user_company} = Ronald Rivera</msg>
 <arg>${registration_user_company}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-07-23T19:16:07.261517" elapsed="0.000519"/>
+<status status="PASS" start="2024-07-24T08:29:48.044138" elapsed="0.000000"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-07-23T19:16:07.263266" level="INFO">Typing text 'Alexander' into text field 'id:FirstName'.</msg>
+<msg time="2024-07-24T08:29:48.052143" level="INFO">Typing text 'Sheri' into text field 'id:FirstName'.</msg>
 <arg>id:FirstName</arg>
 <arg>${registration_user_first_name}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-07-23T19:16:07.263266" elapsed="0.504073"/>
+<status status="PASS" start="2024-07-24T08:29:48.052143" elapsed="0.450509"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-07-23T19:16:07.768460" level="INFO">Typing text 'Savage' into text field 'id:LastName'.</msg>
+<msg time="2024-07-24T08:29:48.503663" level="INFO">Typing text 'Mendoza' into text field 'id:LastName'.</msg>
 <arg>id:LastName</arg>
 <arg>${registration_user_last_name}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-07-23T19:16:07.767339" elapsed="0.183419"/>
+<status status="PASS" start="2024-07-24T08:29:48.502652" elapsed="0.404241"/>
 </kw>
 <kw name="Select From List By Label" owner="SeleniumLibrary">
-<msg time="2024-07-23T19:16:07.952303" level="INFO">Selecting options from selection list 'DateOfBirthDay' by label 17.</msg>
+<msg time="2024-07-24T08:29:48.906893" level="INFO">Selecting options from selection list 'DateOfBirthDay' by label 17.</msg>
 <arg>DateOfBirthDay</arg>
 <arg>${user_date_of_birth_day}</arg>
 <doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<status status="PASS" start="2024-07-23T19:16:07.950758" elapsed="0.192477"/>
+<status status="PASS" start="2024-07-24T08:29:48.906893" elapsed="0.242799"/>
 </kw>
 <kw name="Select From List By Value" owner="SeleniumLibrary">
-<msg time="2024-07-23T19:16:08.151322" level="INFO">Selecting options from selection list 'DateOfBirthMonth' by value 1.</msg>
+<msg time="2024-07-24T08:29:49.152644" level="INFO">Selecting options from selection list 'DateOfBirthMonth' by value 1.</msg>
 <arg>DateOfBirthMonth</arg>
 <arg>${user_date_of_birth_month}</arg>
 <doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<status status="PASS" start="2024-07-23T19:16:08.143235" elapsed="0.258774"/>
+<status status="PASS" start="2024-07-24T08:29:49.149692" elapsed="0.250218"/>
 </kw>
 <kw name="Select From List By Label" owner="SeleniumLibrary">
-<msg time="2024-07-23T19:16:08.402582" level="INFO">Selecting options from selection list 'DateOfBirthYear' by label 1997.</msg>
+<msg time="2024-07-24T08:29:49.402357" level="INFO">Selecting options from selection list 'DateOfBirthYear' by label 1997.</msg>
 <arg>DateOfBirthYear</arg>
 <arg>${user_date_of_birth_year}</arg>
 <doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<status status="PASS" start="2024-07-23T19:16:08.402582" elapsed="0.265146"/>
+<status status="PASS" start="2024-07-24T08:29:49.401316" elapsed="0.224331"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-07-23T19:16:08.669383" level="INFO">Typing text 'anna62@example.net' into text field 'id:Email'.</msg>
+<msg time="2024-07-24T08:29:49.626200" level="INFO">Typing text 'berrymegan@example.org' into text field 'id:Email'.</msg>
 <arg>id:Email</arg>
 <arg>${registration_user_email}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-07-23T19:16:08.668844" elapsed="0.302704"/>
+<status status="PASS" start="2024-07-24T08:29:49.626200" elapsed="0.351456"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-07-23T19:16:08.973210" level="INFO">Typing text 'Jennifer Anderson' into text field 'id:Company'.</msg>
+<msg time="2024-07-24T08:29:49.977656" level="INFO">Typing text 'Ronald Rivera' into text field 'id:Company'.</msg>
 <arg>id:Company</arg>
 <arg>${registration_user_company}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-07-23T19:16:08.971548" elapsed="0.307021"/>
+<status status="PASS" start="2024-07-24T08:29:49.977656" elapsed="0.352660"/>
 </kw>
 <kw name="Select Checkbox" owner="SeleniumLibrary">
-<msg time="2024-07-23T19:16:09.278569" level="INFO">Selecting checkbox 'Newsletter'.</msg>
+<msg time="2024-07-24T08:29:50.330316" level="INFO">Selecting checkbox 'Newsletter'.</msg>
 <arg>Newsletter</arg>
 <doc>Selects the checkbox identified by ``locator``.</doc>
-<status status="PASS" start="2024-07-23T19:16:09.278569" elapsed="0.046975"/>
+<status status="PASS" start="2024-07-24T08:29:50.330316" elapsed="0.043540"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-07-23T19:16:09.325544" level="INFO">Typing text 'Test@123' into text field 'id:Password'.</msg>
+<msg time="2024-07-24T08:29:50.373856" level="INFO">Typing text 'Test@123' into text field 'id:Password'.</msg>
 <arg>id:Password</arg>
 <arg>${user_password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-07-23T19:16:09.325544" elapsed="0.441659"/>
+<status status="PASS" start="2024-07-24T08:29:50.373856" elapsed="0.193779"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-07-23T19:16:09.767203" level="INFO">Typing text 'Test@123' into text field 'id:ConfirmPassword'.</msg>
+<msg time="2024-07-24T08:29:50.567635" level="INFO">Typing text 'Test@123' into text field 'id:ConfirmPassword'.</msg>
 <arg>id:ConfirmPassword</arg>
 <arg>${user_password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-07-23T19:16:09.767203" elapsed="0.151186"/>
+<status status="PASS" start="2024-07-24T08:29:50.567635" elapsed="0.111867"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-07-23T19:16:09.918389" level="INFO">Clicking element 'id:register-button'.</msg>
+<msg time="2024-07-24T08:29:50.681115" level="INFO">Clicking element 'id:register-button'.</msg>
 <arg>id:register-button</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-07-23T19:16:09.918389" elapsed="1.223623"/>
+<status status="PASS" start="2024-07-24T08:29:50.681115" elapsed="0.802040"/>
 </kw>
 <kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2024-07-23T19:16:11.208430" level="INFO">Current page contains element 'xpath://div[contains(text(),'Your registration completed')]'.</msg>
+<msg time="2024-07-24T08:29:51.541705" level="INFO">Current page contains element 'xpath://div[contains(text(),'Your registration completed')]'.</msg>
 <arg>xpath://div[contains(text(),'Your registration completed')]</arg>
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2024-07-23T19:16:11.142012" elapsed="0.066418"/>
+<status status="PASS" start="2024-07-24T08:29:51.483721" elapsed="0.057984"/>
 </kw>
-<status status="PASS" start="2024-07-23T19:16:06.078275" elapsed="5.130155"/>
+<status status="PASS" start="2024-07-24T08:29:46.899880" elapsed="4.641825"/>
 </kw>
-<kw name="Navigate to computers section" owner="keywords">
-<kw name="Click Link" owner="SeleniumLibrary">
-<msg time="2024-07-23T19:16:11.213518" level="INFO">Clicking link 'partial link:Compute'.</msg>
-<arg>partial link:Compute</arg>
-<doc>Clicks a link identified by ``locator``.</doc>
-<status status="PASS" start="2024-07-23T19:16:11.213518" elapsed="0.780536"/>
-</kw>
+<kw name="Navigate to first tab section" owner="keywords">
 <kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-07-23T19:16:12.289311" level="INFO">${first_tab} = Computers</msg>
+<msg time="2024-07-24T08:29:51.677604" level="INFO">${first_tab} = Computers</msg>
 <var>${first_tab}</var>
 <arg>link:Computers</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-07-23T19:16:11.999830" elapsed="0.289481"/>
+<status status="PASS" start="2024-07-24T08:29:51.546429" elapsed="0.131175"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-07-24T08:29:51.677604" level="INFO">Clicking link 'partial link:Compute'.</msg>
+<arg>partial link:Compute</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T08:29:51.677604" elapsed="0.859340"/>
 </kw>
 <kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2024-07-23T19:16:12.343492" level="INFO">Current page contains element 'xpath://h1[contains(text(),'Computers')]'.</msg>
+<msg time="2024-07-24T08:29:52.603132" level="INFO">Current page contains element 'xpath://h1[contains(text(),'Computers')]'.</msg>
 <arg>xpath://h1[contains(text(),'Computers')]</arg>
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2024-07-23T19:16:12.289311" elapsed="0.054181"/>
+<status status="PASS" start="2024-07-24T08:29:52.536944" elapsed="0.066188"/>
 </kw>
 <kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-07-23T19:16:12.409379" level="INFO">${first_tab_page} = Computers</msg>
+<msg time="2024-07-24T08:29:52.664349" level="INFO">${first_tab_page} = Computers</msg>
 <var>${first_tab_page}</var>
 <arg>xpath://h1[contains(text(),'Computers')]</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-07-23T19:16:12.343492" elapsed="0.065887"/>
+<status status="PASS" start="2024-07-24T08:29:52.604751" elapsed="0.059877"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${first_tab}</arg>
 <arg>${first_tab_page}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-07-23T19:16:12.409379" elapsed="0.000000"/>
+<status status="PASS" start="2024-07-24T08:29:52.665277" elapsed="0.001416"/>
 </kw>
-<status status="PASS" start="2024-07-23T19:16:11.213518" elapsed="1.195861"/>
+<status status="PASS" start="2024-07-24T08:29:51.546429" elapsed="1.120264"/>
 </kw>
-<status status="PASS" start="2024-07-23T19:16:01.077161" elapsed="11.332218"/>
+<kw name="Navigate to first tab sub section 1" owner="keywords">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-07-24T08:29:52.804862" level="INFO">${first_tab_sub_section} = Desktops</msg>
+<var>${first_tab_sub_section}</var>
+<arg>link:Desktops</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T08:29:52.666693" elapsed="0.138169"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-07-24T08:29:52.804862" level="INFO">Clicking link 'link:Desktops'.</msg>
+<arg>link:Desktops</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T08:29:52.804862" elapsed="0.942528"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-07-24T08:29:53.819922" level="INFO">Current page contains element 'xpath://h1[contains(text(),'Desktops')]'.</msg>
+<arg>xpath://h1[contains(text(),'Desktops')]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-07-24T08:29:53.749642" elapsed="0.072653"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-07-24T08:29:53.898176" level="INFO">${first_tab_sub_section_page} = Desktops</msg>
+<var>${first_tab_sub_section_page}</var>
+<arg>xpath://h1[contains(text(),'Desktops')]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T08:29:53.822819" elapsed="0.075357"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${first_tab_sub_section}</arg>
+<arg>${first_tab_sub_section_page}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-07-24T08:29:53.899304" elapsed="0.000583"/>
+</kw>
+<status status="PASS" start="2024-07-24T08:29:52.666693" elapsed="1.233194"/>
+</kw>
+<kw name="Navigate to first product" owner="keywords">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-07-24T08:29:54.048653" level="INFO">${first_product} = Build your own computer</msg>
+<var>${first_product}</var>
+<arg>link:Build your own computer</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T08:29:53.903517" elapsed="0.145136"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-07-24T08:29:54.048653" level="INFO">Clicking link 'link:Build your own computer'.</msg>
+<arg>link:Build your own computer</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T08:29:54.048653" elapsed="0.862221"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-07-24T08:29:54.968165" level="INFO">Current page contains element 'xpath://h1[contains(text(),'Build your own computer')]'.</msg>
+<arg>xpath://h1[contains(text(),'Build your own computer')]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-07-24T08:29:54.910874" elapsed="0.057291"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-07-24T08:29:55.008741" level="INFO">${first_product_page} = Build your own computer</msg>
+<var>${first_product_page}</var>
+<arg>xpath://h1[contains(text(),'Build your own computer')]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T08:29:54.969195" elapsed="0.039546"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${first_product}</arg>
+<arg>${first_product_page}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-07-24T08:29:55.008741" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-07-24T08:29:53.901915" elapsed="1.106826"/>
+</kw>
+<status status="PASS" start="2024-07-24T08:29:42.304392" elapsed="12.704349"/>
 </test>
-<status status="PASS" start="2024-07-23T19:16:00.153206" elapsed="12.269393"/>
+<status status="PASS" start="2024-07-24T08:29:41.292213" elapsed="13.724617"/>
 </suite>
 <statistics>
 <total>

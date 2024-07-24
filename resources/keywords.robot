@@ -233,17 +233,27 @@ Change the password
     input text    id:ConfirmNewPassword    ${user_new_password}
 
 #Desktop Section
-Navigate to computers section
-    click link    partial link:Compute
+Navigate to first tab section
     ${first_tab}    get text    link:Computers
+    click link    partial link:Compute
     page should contain element    xpath://h1[contains(text(),'Computers')]
     ${first_tab_page}    get text    xpath://h1[contains(text(),'Computers')]
     Should Be Equal    ${first_tab}    ${first_tab_page}
 
-
-Navigate to Desktop section
-    click on element    xpath://body/div[6]/div[3]/div[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/h2[1]/a[1]
+Navigate to first tab sub section 1
+    ${first_tab_sub_section}    get text    link:Desktops
+    click link    link:Desktops
     page should contain element    xpath://h1[contains(text(),'Desktops')]
+    ${first_tab_sub_section_page}    get text    xpath://h1[contains(text(),'Desktops')]
+    Should Be Equal    ${first_tab_sub_section}    ${first_tab_sub_section_page}
+
+Navigate to first product
+    ${first_product}    get text    link:Build your own computer
+    click link    link:Build your own computer
+    page should contain element    xpath://h1[contains(text(),'Build your own computer')]
+    ${first_product_page}    get text    xpath://h1[contains(text(),'Build your own computer')]
+    Should Be Equal    ${first_product}    ${first_product_page}
+
 
 
 

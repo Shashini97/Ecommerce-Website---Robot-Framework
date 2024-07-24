@@ -16,6 +16,8 @@ Navigate to first tab
     maximize browser window
     Sleep    1s 
     Register
-    Navigate to computers section
+    Navigate to first tab section
+    Navigate to first tab sub section 1
+    Navigate to first product
 
 *** Keywords ***
