@@ -254,6 +254,39 @@ Navigate to first product
     ${first_product_page}    get text    xpath://h1[contains(text(),'Build your own computer')]
     Should Be Equal    ${first_product}    ${first_product_page}
 
+Select a product
+    select from list by Value    product_attribute_1    1
+    select from list by Value    product_attribute_2    3
+    click element    id:product_attribute_3_6
+    click element    id:product_attribute_4_9
+    select checkbox    product_attribute_5
+    Clear Element Text    id:product_enteredQuantity_1
+    input text    id:product_enteredQuantity_1    3
+    ${product_quantity}=    Get Value    id:product_enteredQuantity_1
+    set global variable    ${product_quantity}
+    click element    id:add-to-cart-button-1
+    Sleep    2s
+
+Verify the cart
+    ${cart}    get text    id:topcartlink
+    ${number}     Evaluate    "${cart}".split(" ")[2]
+    ${number_only}=	Strip String	${number}	characters=()
+    ${item_count} =	Convert To Integer    ${number_only}
+    set global variable    ${item_count}
+
+Verify the new cart
+    ${item_count}=    Evaluate    ${item_count}+${product_quantity}
+    ${cart_2}    get text    id:topcartlink
+    ${number_2}     Evaluate    "${cart_2}".split(" ")[2]
+    ${number_only_2}=	Strip String	${number_2}	characters=()
+    ${item_count_2} =	Convert To Integer    ${number_only_2}
+    Should Be Equal    ${item_count}    ${item_count_2}
+
+
+    
+
+
+    
 
 
 
